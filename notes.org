@@ -1,0 +1,116 @@
+#+TITLE: Learn JavaScript JQuery from scratch
+#+DATE: \today
+#+AUTHOR: Sachin
+#+EMAIL: iclcoolster@gmail.com
+#+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+OPTIONS: author:t c:nil creator:comment d:(not "LOGBOOK") date:t
+#+OPTIONS: e:t email:nil f:t inline:t num:t p:nil pri:nil stat:t
+#+OPTIONS: tags:t tasks:t tex:t timestamp:t toc:t todo:t |:t
+#+CREATOR: Emacs 24.4.1 (Org mode 8.2.10)
+#+DESCRIPTION: Udemy course: Learn JavaScript JQuery from scratch
+#+EXCLUDE_TAGS: noexport
+#+KEYWORDS:
+#+LANGUAGE: en
+#+SELECT_TAGS: export
+
+* Lecture 1: JS fundamentals
+* Lecture 2: JQ fundamentals
+  - JQ is a multi-browser js library
+  - It is nothing but a bunch of js
+  - It makes it easy to navigate document and select DOM(body tag, h1
+    tag, browser windows itself are DOM) elements
+  - It handles events effectively
+  - You can use JQ to create plugins on top of the js library
+
+  - *Document Ready Handler*: We need to check if the document is
+    ready(after the page is loaded). If we don't do this, jq will
+    execute before the rest of code in which we are trying to use or
+    modify.
+
+    #+BEGIN_SRC js -n
+    $(document).ready(function(){
+    // all jq code goes here
+    })
+    #+END_SRC
+
+  - *Selecting Elements*: We can grab and select any DOM. This could
+    be divs, list, paras or any other tag and element
+
+    Examples
+    #+BEGIN_SRC js -n
+      // Select all <div> tags
+      $("div")
+
+      // Select div having id="myDiv"
+      $("#myDiv")
+
+      // Select paragraph with class of myClass
+      $("p.myClass")
+    #+END_SRC
+
+  - *JQ Actions*: Once we grab something with a selector, we can do
+    things with it such as call an action
+
+    Examples
+    #+BEGIN_SRC js -n
+      // .addClass() action
+      // Dynamically add class "myClass" to all divs
+      $("div").addClass("myClass");
+
+      // .css() action
+      // Add css style to an element. Add red color where id="myClass"
+      $("#myClass").css("color", "red");
+
+      // Get all html which is inside an element using .html()
+      var myElement = $("#myElement").html()
+    #+END_SRC
+
+  - *JQ Events*: Handle events
+
+    #+BEGIN_SRC js -n
+      // Click event
+      // for all <a> when clicked, do something
+      $("a").click(function(){
+          // do something
+      })
+    #+END_SRC
+
+    Some other events
+    - Blur
+    - Focus
+    - Hover
+    - Key down
+    - Load
+
+  - *Show/Hide elements*: We can show hide elements using JQ
+    Examples
+    #+BEGIN_SRC js -n
+      $("#myElement").hide(function(){
+          // do something once the element is hidden
+      })
+
+      $("#myElement").show(function(){
+          // do something once the element is shown
+      })
+
+      $("#myElement").toggle(function(){
+          // do something once the element is shown/hidden
+      })
+    #+END_SRC
+
+  - *Animation*:
+
+    #+BEGIN_SRC js -n
+      // $("ID").slideDown(SPEED(can be numeric or word), FUNCTION)
+      $("#myElement").slideDown("fast", function(){
+          // do something when slide down is finished
+      })
+
+      $("#myElement").slideUp("slow", function(){
+          // do something when slide up is finished
+      })
+
+      $("#myElement").slideToggle(1000, function(){
+          // do something when slide up/down is finished
+      })
+    #+END_SRC

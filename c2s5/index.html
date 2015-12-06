@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>c2s5: Conditions</title>
+    <script>
+    x = 6;
+    </script>
+  </head>
+  <body>
+    <script>
+      if (x>5 && x<10){
+	alert("x is greater than 5");
+      } else if(x<5) {
+	  alert("x is less than 5");
+      } else {
+	  alert("x is equal to 5");
+      }
+
+switch(x){
+case 2:
+    document.write("x is 2");
+    break;
+case 6:
+    document.write("x is 6");
+    break;
+default:
+    document.write("x is not 2 or 6");
+    break;
+}
+
+document.write("<br>");
+var day = new Date().getDay();
+document.write("Today is: "+ day +"th day of week");
+    </script>
+  </body>
+</html>

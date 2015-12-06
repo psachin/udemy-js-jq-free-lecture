@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>c2s3: Loops</title>
+    <script>
+    var people = ["Sally", "Bob", "Steve", "Jen"];
+    </script>
+  </head>
+  <body>
+    <script>
+    for (i=0; i<=10; i++) {
+	document.write("Number is: " + i +"<br>");
+    }
+
+    var k = 0;
+    while (k<=10){
+	document.write("Number is: " + k +"<br>");
+    k++;
+    }
+
+    for (p in people){
+	document.write(people[p]+"<br>");
+    }
+
+    for (i=0; i<people.length; i++) {
+	document.write("Hi : " + people[i] +"<br>");
+    }
+
+    i = 0;
+    while(i<people.length){
+	document.write("while Hi : " + people[i] +"<br>");
+	i++;
+    }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>JS events</title>
+    <script>
+      function sayHi(){
+      alert("Hi");
+      }
+
+      function changeMe(){
+      var heading = document.getElementById("heading");
+      heading.innerHTML = "No kidding";
+      <!-- change the text of element with id 'heaading' -->
+      }
+
+      function changeMeBack(){
+      var heading = document.getElementById("heading");
+      heading.innerHTML = "This is a heading";
+      }
+    </script>
+  </head>
+  <body onload="return sayHi()">
+    <button onClick="return sayHi()">Click Me</button>
+    <h1 id="heading" onmouseover="return changeMe()"
+    onmouseout="return changeMeBack()">This is a heading</h1>
+  </body>
+</html>

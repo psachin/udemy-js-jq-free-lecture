@@ -1,0 +1,25 @@
+<!Doctype html>
+<html>
+  <head>
+    <title>JQ Objects & events</title>
+
+    <style>
+      .red{color:red};
+    </style>
+
+    <script type="text/javascript" src="jquery.js">
+    </script>
+
+    <script>
+      $(document).ready(function(){
+      $("h1.myClass").html("Header changed"); <!-- this is same as .innerHTML() -->
+      $("h1").addClass('red');
+      })
+
+    </script>
+  </head>
+  <body>
+    <h1>This is a heading</h1>
+    <h1 class="myClass">Another method</h1>
+  </body>
+</html>

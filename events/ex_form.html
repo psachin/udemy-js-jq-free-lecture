@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>JS events</title>
+    <script>
+      function focusIn(x){
+      x.style.background = "yellow";
+      }
+
+      function blurOut(x){
+      x.style.background = "white";
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      Name: <input type="text" onfocus="focusIn(this)" onblur="blurOut(this)" name="name"><br />
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>

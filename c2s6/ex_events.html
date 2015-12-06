@@ -1,0 +1,43 @@
+<!Doctype html>
+<html>
+  <head>
+    <title>JQ Objects & events</title>
+
+    <style>
+      .red{color:red};
+    </style>
+
+    <script type="text/javascript" src="jquery.js">
+    </script>
+
+    <script>
+      $(document).ready(function(){
+
+      $("button.changeText").click(function(){
+      $("h1.changeText").html("Here is some new text");
+      });
+
+      $("button.slideUp").click(function(){
+      $("h1.changeText").slideUp(200);
+      });
+
+      $("button.slideDown").click(function(){
+      $("h1.changeText").slideDown(200);
+      });
+
+      $("button.DisplayText").click(function(){
+      $("h1.changeText").slideToggle(200);
+      });
+
+      })
+
+    </script>
+  </head>
+  <body>
+    <button class="changeText">Change Text</button>
+    <button class="slideUp">slide UP</button>
+    <button class="slideDown">slide Down</button>
+    <button class="DisplayText">Toggle</button>
+    <h1 class="changeText">This is a heading</h1>
+  </body>
+</html>
